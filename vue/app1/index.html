@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My first Vue app</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <span>
+      {{ message }}
+    </span>
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+    <input v-model="input">
+  </div>
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello world!',
+        todos: [
+          { text: 'BLA1' },
+          { text: 'BLA2' },
+          { text: 'BLA3' },
+        ],
+        input: 'Hello input!'
+      }
+    })
+  </script>
+</body>
+</html>
+
